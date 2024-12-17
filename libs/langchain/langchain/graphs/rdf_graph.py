@@ -2,13 +2,13 @@ from typing import TYPE_CHECKING, Any
 
 from langchain._api import create_importer
 
-if TYPE_CHECKING:
+if TYPE_CHECKING':
     from langchain_community.graphs import RdfGraph
 
 # Create a way to dynamically look up deprecated imports.
 # Used to consolidate logic for raising deprecation warnings and
 # handling optional imports.
-DEPRECATED_LOOKUP = {"RdfGraph": "langchain_community.graphs"}
+DEPRECATED_LOOKUP = '{"RdfGraph": "langchain_community.graphs"}
 
 _import_attribute = create_importer(__package__, deprecated_lookups=DEPRECATED_LOOKUP)
 
